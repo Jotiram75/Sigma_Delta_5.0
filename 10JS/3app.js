@@ -104,3 +104,88 @@ console.log(cont.slice(1)); // slices array
 
 console.log(cont.slice(-1)); // slices array
 console.log(cont.slice(-2)); // slices array
+
+//splice
+ let color=["red","blue","green","black","white"];
+console.log(color); // prints array
+
+color.splice(3);
+console.log(color); // removes elements from index 3 to end of array
+
+color.splice(2,1,"yellow","black"); // removes 1 element from index 2 and adds "yellow"
+console.log(color);
+
+color.splice(0,0,"yellow","black"); // removes 1 element from index 2 and adds "yellow"
+console.log(color);
+
+//sort
+let days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+console.log(days); // prints array
+
+days.sort(); // sorts array in ascending order
+console.log(days); // prints array
+
+let cars=["audi","bmw","mercedes","toyota","honda"];
+console.log(cars); // prints array
+cars.sort(); // sorts array in ascending order
+
+
+let num1=[1,2,3,4,5,6,7,8,9,10];
+console.log(num1); // prints array  
+num1.sort(); // sorts array in ascending order
+
+
+//practice set 2
+console.log(month); // prints array
+month.splice(0,1,"january");
+month.splice(2,1);
+console.log(month); // prints array
+
+month.splice(0,1);
+month.splice(1,0,"june");
+console.log(month); // prints array
+
+let lang=["c","c++","html","javascript","python","java","c#","sql"];
+console.log(lang); // prints array
+
+lang.reverse(); // reverses array
+console.log(lang.indexOf("javascript"));
+console.log(lang); // prints array
+
+//refernces
+ let arr=["a","b","c","d"];
+let arrCopy=arr; // copies array
+console.log(arrCopy); // prints array
+arr[0]="z"; // changes first element of array
+console.log(arrCopy); // prints array
+console.log(arr); // prints array
+
+arrCopy=["e","f","g","h"]; // changes array
+console.log(arr); // prints array
+console.log(arrCopy); // prints array
+
+//constant
+
+const pi=3.14; // constant
+console.log(pi); // prints constant
+
+const arr1=[1,2,3]; // constant array
+console.log(arr1); // prints constant array
+
+arr1.push(4); // adds element to array
+console.log(arr1); // prints array
+arr1[0]=5; // changes first element of array
+console.log(arr1); // prints array
+
+//nested array
+let num2=[[2,4],[3,46],[4,8]];
+console.log(num2);
+
+console.log(num2[0][0]);
+
+//practice set 3
+let gamettt=[['X',null,'0'],[null,'X',null],['0',null,'X']];
+console.log(gamettt);
+
+console.log(gamettt[0][1]='0');
+
