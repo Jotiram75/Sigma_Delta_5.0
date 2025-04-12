@@ -223,12 +223,109 @@ for(let i=5;i<=50;i=i+5) {
     console.log(i);
 }
 
-let n=prompt("Write your number");
-n=parseInt(n);
-console.log("Table of "+n);
+// let n=prompt("Write your number");
+// n=parseInt(n);
+// console.log("Table of "+n);
 
-for(let i=n;i<=n*10;i=i+n){
+// for(let i=n;i<=n*10;i=i+n){
+//     console.log(i);
+// }
+
+//nested loops
+for(let i=1; i<=5;i++){
+    console.log("Outer Loop"+i);
+    for (let i=1;i<=5;i++){
+        console.log(i);
+    }
+}
+
+
+//while loop
+console.log("while Loop");
+
+let i=0;
+while(i<=20){
+    console.log(i);
+    i++
+}
+
+
+// Game
+// const favuorite ="Avatar";
+// let guess=prompt("Guess My Favuorite Movie");
+// while((guess!=favuorite)&&(guess!='quit')){
+//     guess=prompt("Wrong Guess. Please Try Again");
+    
+// }
+
+// if(guess==favuorite){
+//     console.log("Congrats!!");
+// }else{
+//     console.log("You Exit The Game");
+// }
+
+
+//Loops with Array
+let fruits=["Mango","Apple","Banana","Litchi","Orange"];
+
+for(let i=0;i<fruits.length;i++){
+    console.log(i, fruits[i]);
+}
+console.log("Reverse Array");
+for(let i=fruits.length-1;i>=0;i--){
+    console.log(i, fruits[i]);
+}
+
+//nested array
+
+let student=[["aman",95],["joti",65],["ram",90]];
+
+for(let i=0;i<student.length;i++){
+    console.log(`Info of Student #${i+1}`);
+    for(let j=0;j<students[i].length;j++){
+        console.log(student[i][j]);
+    }
+}
+
+//for of loop
+let fruits1=["Banana","Mango","Chiku"];
+for(i of fruits1){
     console.log(i);
 }
 
-//nested loops
+for(char of "JotiramShinde"){
+    console.log(char);
+}
+
+
+//To-Do App
+let todo=[];
+
+let req=prompt("Please Enter your request");
+
+while(true){
+    if (req == "quit"){
+        console.log("Quiting App");
+        break;
+    }
+    if(req=="list"){
+        console.log("____________________________________");
+        for(let i=0;i<todo.length;i++){
+            console.log(i,todo[i]);
+        }
+        console.log("____________________________________");
+    }else if(req=="add"){
+        let task=prompt("Please Enter the task you want to add");
+        todo.push(task);
+        console.log("Tassk Added");
+    }else if(req=="delete"){
+        let idx=prompt("Please Enter the task Index");
+        todo.splice(idx,1);
+        console.log("Task Deleted");
+    }else{
+        console.log("Wrong Request");
+    }
+
+    req=prompt("Please Enter your request");
+
+}
