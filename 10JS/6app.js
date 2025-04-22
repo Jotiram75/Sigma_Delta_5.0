@@ -240,11 +240,110 @@ let square=(n)=>{
 }
 console.log(square(2));
 
-let id =setInterval(()=>{
-    console.log("Hello World");
-},2000)
+// let id =setInterval(()=>{
+//     console.log("Hello World");
+// },2000)
 
-setTimeout(()=>{
-    clearInterval(id);
-    console.log("Clear interval run");
-},10000);
+// setTimeout(()=>{
+//     clearInterval(id);
+//     console.log("Clear interval run");
+// },10000);
+
+
+//array methods
+let arr=[1,2,3,4,5];
+
+// arr.forEach((el)=>{
+//     console.log(el);
+// });
+
+let print = function(el){
+    console.log(el);
+};
+
+arr.forEach(print);
+
+let arr1=[{
+    name:"ram",
+    marks:90,
+},
+{
+    name:"ramesh",
+    marks:91,
+},
+{
+    name:"sham",
+    marks:92,
+}];
+
+//for each
+arr1.forEach((student)=>{
+    console.log(student.marks);
+});
+
+let num=[1,2,3,4];
+
+
+//map
+
+let double = num.map((el)=>{
+    return el*el;
+});
+
+console.log(double);
+
+//filter
+
+let nums=[1,2,3,4,5,6,7,8,9,10,11,12];
+let ans = nums.filter((el)=>{
+return el % 2!=0;
+});
+console.log(ans);
+
+//every and sum
+
+console.log([1,2,3,4].every((el)=>(el%2==0)));
+
+console.log([1,2,3,4].reduce((res,el)=>(res+el)));
+
+//max
+let nums1=[1,2,3,4,5,8,9,14];
+let max1=nums1.reduce((max,el)=>{
+    if(el>max){
+        return el;
+    }else{
+        return max;
+    }
+});
+console.log(max1);
+
+//spread 
+let arrr=[1,2,3,4,5];
+let newarr=[...arrr];
+console.log(newarr);
+
+let newnum=[...newarr, ...nums1];
+console.log(newnum);
+
+let newnumsobj={...newnum};
+console.log(newnumsobj);
+
+//rest
+
+function sum4(...args){
+    return args.reduce((sum,el)=>sum+el);
+}
+
+
+function min(msg,...args){
+    console.log(msg);
+    return args.reduce((min,el)=>{
+        if (min>el){
+            return el;
+        }else{
+            return min;
+        }
+    });
+};
+
+//destructuring 
