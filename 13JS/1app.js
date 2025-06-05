@@ -7,11 +7,12 @@ function changeColor(color, delay, nextColoChange){
     }, delay);
 };
 
-changeColor("red",1000, () => {
-    changeColor("green",1000, () => {
-        changeColor("orange",1000);
-    });
-});
+
+// changeColor("red",1000, () => {
+//     changeColor("green",1000, () => {
+//         changeColor("orange",1000);
+//     });
+// });
 
 // callback hell
 
